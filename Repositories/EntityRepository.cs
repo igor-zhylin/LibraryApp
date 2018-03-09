@@ -26,11 +26,11 @@
                 .SingleOrDefault();
         }
 
-        
-        /*
-        public IList<T> GetBookByName(string bookName)
+        public User GetByName(string name)
         {
+            return this.Session.QueryOver<User>()
+                .Where(x => x.Firstname == name)
+                .SingleOrDefault();
         }
-        */
     }
 }

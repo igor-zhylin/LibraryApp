@@ -1,4 +1,5 @@
-﻿namespace DTO
+﻿
+namespace DTO
 {
     public class UserDTO : EntityDTO
     {

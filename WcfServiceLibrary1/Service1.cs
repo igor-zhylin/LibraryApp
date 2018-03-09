@@ -62,6 +62,32 @@
             return booksDTO;
         }
 
+        public UserDTO GetByUserName(string name)
+        {
+            User user = null;
+            UserDTO userDTO;
+            try
+            {
+                using (EntityRepositoryFactory factory = new EntityRepositoryFactory())
+                {
+                    user = factory.GetRepository<User>().GetByName(name);
+                }
+            }
+            catch
+            {
+
+            }
+            userDTO = new UserDTO()
+            {
+                id = user.id,
+                FirstName = user.Firstname,
+                LastName = user.Lastname,
+                Limit = user.Limit
+            };
+
+            return userDTO;
+        }
+
         public List<UserDTO> GetUsers()
         {
             IList<User> users = null;
@@ -74,7 +100,7 @@
                     users = factory.GetRepository<User>().Load();
                 }
             }
-            catch (Exception e)
+            catch
             {
 
             }

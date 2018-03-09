@@ -1,4 +1,5 @@
-﻿namespace DTO
+﻿
+namespace DTO
 {
     using System;
 

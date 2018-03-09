@@ -1,4 +1,5 @@
-﻿namespace Data.Conventions
+﻿
+namespace Data.Conventions
 {
     using FluentNHibernate.Conventions;
     using FluentNHibernate.Conventions.Instances;

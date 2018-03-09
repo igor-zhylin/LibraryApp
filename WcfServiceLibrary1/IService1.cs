@@ -15,6 +15,9 @@
         List<BookDTO> GetBooks();
 
         [OperationContract]
+        UserDTO GetByUserName(string name);
+
+        [OperationContract]
         BookDTO GetBookById(int index);
     }
 }
